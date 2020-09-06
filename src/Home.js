@@ -15,7 +15,7 @@ function Home() {
                     price={222}
                     rating={4}
                     image="https://m.media-amazon.com/images/I/51HfbNSrA6L._AC_SR250,230_.jpg" />
-                <Products id="123"
+                <Products id="1234"
                     title="Ani"
                     price={222}
                     rating={4}
@@ -23,24 +23,24 @@ function Home() {
 
             </div>
             <div className="home__row">
-                <Products id="123"
+                <Products id="12345"
                     title="Ani"
                     price={222}
                     rating={4}
                     image="https://m.media-amazon.com/images/I/51HfbNSrA6L._AC_SR250,230_.jpg" />
-                <Products id="123"
+                <Products id="1235"
                     title="Ani"
                     price={222}
                     rating={4}
                     image="https://m.media-amazon.com/images/I/51HfbNSrA6L._AC_SR250,230_.jpg" />
-                <Products id="123"
+                <Products id="1236"
                     title="Ani"
                     price={222}
                     rating={4}
                     image="https://m.media-amazon.com/images/I/51HfbNSrA6L._AC_SR250,230_.jpg" />
             </div>
             <div className="home__row">
-                <Products id="123"
+                <Products id="1237"
                     title="Ani"
                     price={222}
                     rating={4}
