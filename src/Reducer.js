@@ -1,7 +1,17 @@
 export const initialState = {
-    basket: [],
+    basket: [{
+        id: "1",
+        title: "Test",
+        price: 200,
+        rating: 2,
+        image: "https://m.media-amazon.com/images/I/51HfbNSrA6L._AC_SR250,230_.jpg"
+
+
+    }],
     user: null,
 }
+
+export const getBasketTotal = (basket) => basket?.reduce((amount, item) => item.price + amount, 0)
 
 const reducer = (state, action) => {
     console.log(action)
@@ -13,7 +23,15 @@ const reducer = (state, action) => {
             }
             break;
         case 'REMOVE_FROM_BASKET':
-            return { state }
+
+            let newBasket = [...state.basket];
+            const index = state.basket.findIndex((basketItem) => basketItem.id === action.id)
+            if (index >= 0) {
+                newBasket.splice(index, 1)
+            } else {
+                console.warn(`Can't Remove Item It Id.:${action.id}`)
+            }
+            return { ...state, basket: newBasket }
             break;
         default: return state;
     }
