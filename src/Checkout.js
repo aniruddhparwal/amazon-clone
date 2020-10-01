@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useStateValue } from './StateProvider'
 import "./checkout.css"
 import CheckoutProduct from "./CheckoutProduct"
@@ -6,6 +6,10 @@ import Subtotal from "./Subtotal"
 function Checkout() {
 
     const [{ basket }] = useStateValue();
+
+    useEffect(() => {
+        document.title = "CheckOut"
+    }, [])
 
     return (
         <div className="checkout">

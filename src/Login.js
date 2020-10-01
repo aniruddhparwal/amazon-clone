@@ -1,9 +1,13 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./login.css"
 import { Link } from "react-router-dom"
 import { auth } from './firebase'
 import { useHistory } from 'react-router-dom'
 function Login() {
+
+    useEffect(() => {
+        document.title = "Login"
+    }, [])
     const history = useHistory()
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')

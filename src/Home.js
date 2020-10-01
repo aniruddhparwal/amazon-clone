@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./home.css"
 import Products from "./Products"
 
 function Home() {
+    useEffect(() => {
+        document.title = "Amazon Clone"
+    }, [])
+
     return (
         <div className="home">
             <img

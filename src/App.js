@@ -13,6 +13,7 @@ function App() {
   const [{ user }, dispatch] = useStateValue()
 
   useEffect(() => {
+    document.title = "Amazon Clone"
     const unsubscribe = auth.onAuthStateChanged((authUser) => {
       if (authUser) {
         dispatch({
